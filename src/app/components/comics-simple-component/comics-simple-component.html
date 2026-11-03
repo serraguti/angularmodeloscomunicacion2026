@@ -5,3 +5,15 @@
 <p>Descripción: {{comic.descripcion}}</p>
 <img src="{{comic.imagen}}"
     style="width: 90px; height: 130px;"/>
+
+<button (click)="mostrarComics()">
+    Cargar comics
+</button>
+@for (tebeo of arraycomics; track tebeo){
+    <h3 style="color:rgb(233, 19, 119)">
+        Título: {{tebeo.titulo}}
+    </h3>
+    <p>Descripción: {{tebeo.descripcion}}</p>
+    <img src="{{tebeo.imagen}}"
+        style="width: 120px; height: 160px;"/>
+}
