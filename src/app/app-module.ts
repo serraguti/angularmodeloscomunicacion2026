@@ -5,9 +5,10 @@ import { App } from './app';
 import { MenuComponent } from './components/menu-component/menu-component';
 import { HomeComponent } from './components/home-component/home-component';
 import { ComicsSimpleComponent } from './components/comics-simple-component/comics-simple-component';
+import { ComicsJsonComponent } from './components/comics-json-component/comics-json-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeComponent, ComicsSimpleComponent],
+  declarations: [App, MenuComponent, HomeComponent, ComicsSimpleComponent, ComicsJsonComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
