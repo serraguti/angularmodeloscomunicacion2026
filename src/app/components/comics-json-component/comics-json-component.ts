@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Comic } from '../../models/comic';
 
 @Component({
@@ -9,6 +9,10 @@ import { Comic } from '../../models/comic';
 })
 export class ComicsJsonComponent {
   arraycomics: Comic[] = [];
+
+  constructor(
+    private _cdr: ChangeDetectorRef
+  ) {}
 
   async mostrarComics(): Promise<void> {
     let path = "documents/comics.json";
@@ -23,5 +27,6 @@ export class ComicsJsonComponent {
       //guardamos cada comic en el array
       this.arraycomics.push(comic);
     }
+    this._cdr.detectChanges();
   }
 }
