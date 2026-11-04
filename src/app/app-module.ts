@@ -8,6 +8,7 @@ import { ComicsSimpleComponent } from './components/comics-simple-component/comi
 import { ComicsJsonComponent } from './components/comics-json-component/comics-json-component';
 import { JugadoresComponent } from './components/jugadores-component/jugadores-component';
 import { FormsModule } from '@angular/forms';
+import { BuscarClienteComponent } from './components/buscar-cliente-component/buscar-cliente-component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     ComicsSimpleComponent,
     ComicsJsonComponent,
     JugadoresComponent,
+    BuscarClienteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
