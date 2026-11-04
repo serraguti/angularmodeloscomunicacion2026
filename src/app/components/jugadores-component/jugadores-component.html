@@ -1,4 +1,7 @@
 <h1>Jugadores JSON</h1>
+<button (click)="mostrarJugadores()">
+    Ver jugadores
+</button>
 @for (jugador of jugadores; track jugador){
     <p>{{jugador.nombre}}</p>
     <img src="{{jugador.imagen}}"

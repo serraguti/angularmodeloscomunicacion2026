@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Jugador } from '../../models/jugador';
 
 @Component({
@@ -10,6 +10,10 @@ import { Jugador } from '../../models/jugador';
 export class JugadoresComponent {
   jugadores: Jugador[] = []
 
+  constructor(
+    private _cdr: ChangeDetectorRef
+  ){}
+
   async mostrarJugadores(): Promise<void> {
     let path = "documents/jugadores.json";
     let response = await fetch(path);
@@ -18,5 +22,6 @@ export class JugadoresComponent {
       let player = new Jugador(elem.nombre, elem.imagen);
       this.jugadores.push(player);
     }
+    this._cdr.detectChanges();
   }
 }
