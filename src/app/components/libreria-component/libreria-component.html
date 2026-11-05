@@ -1,1 +1,6 @@
-<p>libreria-component works!</p>
+<h2 style="color:fuchsia">
+    Bienvenido a mi librería de comics
+</h2>
+@for (dato of arraycomics; track dato){
+    <app-comic-component [comic]="dato"/>
+}

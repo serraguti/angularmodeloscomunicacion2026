@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Comic } from '../../models/comic';
 
 @Component({
   selector: 'app-comic-component',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './comic-component.css',
   templateUrl: './comic-component.html',
 })
-export class ComicComponent {}
+export class ComicComponent {
+  @Input() comic!: Comic;
+}
