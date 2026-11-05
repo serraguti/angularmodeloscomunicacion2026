@@ -5,6 +5,8 @@ import { ComicsSimpleComponent } from './components/comics-simple-component/comi
 import { ComicsJsonComponent } from './components/comics-json-component/comics-json-component';
 import { JugadoresComponent } from './components/jugadores-component/jugadores-component';
 import { BuscarClienteComponent } from './components/buscar-cliente-component/buscar-cliente-component';
+import { PadreDeportesComponent } from './components/padre-deportes-component/padre-deportes-component';
+import { LibreriaComponent } from './components/libreria-component/libreria-component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path: "comicsjson", component: ComicsJsonComponent},
   {path: "jugadores", component: JugadoresComponent},
   {path: "buscarcliente", component: BuscarClienteComponent},
+  {path: "padredeportes", component: PadreDeportesComponent},
+  {path: "libreria", component: LibreriaComponent},
 ];
 
 @NgModule({
