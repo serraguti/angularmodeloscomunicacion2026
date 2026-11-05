@@ -10,6 +10,7 @@ import { Cliente } from '../../models/cliente';
 export class BuscarClienteComponent implements OnInit {
   @ViewChild("cajaid") cajaid!: ElementRef;
   cliente!: Cliente;
+  arrayclientes: Cliente[] = []
 
   async buscarCliente(): Promise<void> {
     //en la caja, escriben el numero de idcliente 14
@@ -40,7 +41,12 @@ export class BuscarClienteComponent implements OnInit {
     let datos = await response.json();
     //recorremos todos los datos del json
     for (let elem of datos){
-
+      //debemos crear un cliente por cada dato que leemos
+      //del json
+      let cli = new Cliente(elem.idcliente, elem.nombre,
+        elem.paginaweb, elem.imagencliente);
+      //añadimos al array cada cliente
+      this.arrayclientes.push(cli);
     }
     this._cdr.detectChanges();
   }

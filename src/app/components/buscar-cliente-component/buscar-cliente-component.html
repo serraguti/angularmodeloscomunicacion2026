@@ -1,7 +1,13 @@
 <h1>Buscador cliente JSON</h1>
 <form #form="ngForm">
-    Introduzca un ID de cliente
-    <input type="number" name="cajaid" #cajaid/>
+    Seleccione un cliente
+    <select name="cajaid" #cajaid>
+        @for (cli of arrayclientes; track cli){
+            <option value="{{cli.idcliente}}">
+                {{cli.nombre}}
+            </option>
+        }
+    </select>
     <button (click)="buscarCliente()">
         Buscar cliente
     </button>
